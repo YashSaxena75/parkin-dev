@@ -11,7 +11,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Poppins", sans-serif;
 }
@@ -180,17 +182,26 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs nav ol li+li {
+.breadcrumbs nav ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs nav ol li+li::before {
+.breadcrumbs nav ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #4278cc;
   content: "/";
 }
-
+/*  */
+.img-container {
+  height: 450px;
+  padding-top: 50px;
+}
+.img-parking {
+  /* object-fit: contain; */
+  width: 100%;
+  height: 100%;
+}
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
@@ -370,7 +381,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -423,11 +434,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -439,7 +450,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -452,13 +463,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -515,7 +525,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -544,8 +554,8 @@ section {
     border: 1px solid #19335c;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -694,7 +704,10 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(13, 66, 255, 0.4) 52%);
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(13, 66, 255, 0.4) 52%
+  );
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -842,7 +855,8 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)),
+    url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -889,12 +903,12 @@ section {
   padding-top: 80px;
 }
 
-.features .features-item+.features-item {
+.features .features-item + .features-item {
   margin-top: 100px;
 }
 
 @media (max-width: 640px) {
-  .features .features-item+.features-item {
+  .features .features-item + .features-item {
     margin-top: 40px;
   }
 }
@@ -1523,7 +1537,7 @@ section {
   padding: 12px 15px;
 }
 
-.get-a-quote .php-email-form button[type=submit] {
+.get-a-quote .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
@@ -1532,7 +1546,7 @@ section {
   border-radius: 4px;
 }
 
-.get-a-quote .php-email-form button[type=submit]:hover {
+.get-a-quote .php-email-form button[type="submit"]:hover {
   background: rgba(13, 66, 255, 0.8);
 }
 
@@ -1559,7 +1573,7 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1610,7 +1624,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1658,7 +1672,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 35px;
@@ -1667,7 +1681,7 @@ section {
   border-radius: 5px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(13, 66, 255, 0.8);
 }
 
@@ -1681,15 +1695,15 @@ section {
   }
 }
 /* <------------------------vission----------------------------> */
-.vision_header{
+.vision_header {
   display: flex;
   justify-content: center;
   font-family: fantasy;
   font-size: 48px;
 }
-.vision-para{
+.vision-para {
   display: flex;
-    text-align: center;
+  text-align: center;
 }
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1771,9 +1785,9 @@ section {
   padding: 120px 0 60px 0;
   color: rgba(255, 255, 255, 0.8);
 }
-.img-fluid{
-  border-radius: 10px;;
-  background-size: 'contains';
+.img-fluid {
+  border-radius: 10px;
+  background-size: "contains";
   /* width: 100%;
   height: 100%; */
 }
